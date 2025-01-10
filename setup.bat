@@ -13,12 +13,5 @@ IF %ERRORLEVEL% NEQ 0 (
     exit /b
 )
 
-:: Khởi tạo npm và cài đặt thư viện
-echo [*] Setting up the project...
-npm init -y
-npm install express ejs body-parser axios
+Start env.bat
 
-:: Khởi chạy ứng dụng
-echo [*] Starting the application...
-npm start
-pause
