@@ -94,7 +94,6 @@ api-app/
 
 ## **Hỗ trợ**
 - Nếu bạn gặp vấn đề khi sử dụng, hãy kiểm tra xem Node.js đã được cài đặt đúng phiên bản chưa.
-- Báo lỗi hoặc yêu cầu hỗ trợ thêm tại email: [support@example.com](mailto:support@example.com).
 
 ---
 
