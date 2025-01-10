@@ -87,7 +87,8 @@ api-app/
 │   └── style.css         # File định dạng CSS
 ├── package.json          # File cấu hình npm
 ├── setup.bat             # Script tự động cho Windows
-├── setup.sh              # Script tự động cho Linux/MacOS
+├── start.bat             # Script tự động chạy app.js
+├── env.bat               # Script tự động cài đặt thư viện bắt buộc
 ```
 
 ---
