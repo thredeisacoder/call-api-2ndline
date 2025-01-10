@@ -50,14 +50,14 @@
    ```
    http://localhost:3000
    ```
-2. **Đặt đơn hàng**:
+2. **Lấy Số**:
    - Nhập các thông tin:
      - API Key
      - Country ID
      - Service ID
      - Operator ID
    - Nhấn **Place Order** để gửi yêu cầu.
-3. **Kiểm tra đơn hàng**:
+3. **Lấy OTP**:
    - Nhập các thông tin:
      - API Key
      - Order ID
@@ -87,4 +87,4 @@ api-app/
 ---
 
 ## **Bản quyền**
-© 2025 Threde. Licensed under the ISC License.
+© 2025 Threde. Licensed under the MIT License.
