@@ -43,18 +43,6 @@
    - Script sẽ tự động kiểm tra và cài đặt Node.js nếu chưa có.
    - Cài đặt các gói cần thiết và khởi chạy ứng dụng.
 
-#### **Đối với người dùng Linux/MacOS**
-1. Tải ứng dụng và giải nén file ZIP.
-2. Mở terminal và điều hướng đến thư mục của ứng dụng:
-   ```bash
-   cd path/to/api-app
-   ```
-3. Chạy script cài đặt:
-   ```bash
-   ./setup.sh
-   ```
-4. Script sẽ tự động kiểm tra Node.js, cài đặt các gói npm, và khởi chạy ứng dụng.
-
 ---
 
 ### **3. Cách sử dụng**
