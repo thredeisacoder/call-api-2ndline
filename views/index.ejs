@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API App</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>API Application</h1>
+        <div class="content">
+            <!-- Cột bên trái: Form -->
+            <div class="forms">
+                <!-- Form Đặt đơn hàng -->
+                <form action="/order" method="POST">
+                    <h2>Place an Order</h2>
+                    <label for="apikey">API Key:</label>
+                    <input type="text" id="apikey" name="apikey" required>
+    
+                    <label for="countryId">Country ID:</label>
+                    <input type="text" id="countryId" name="countryId" required>
+    
+                    <label for="serviceId">Service ID:</label>
+                    <input type="text" id="serviceId" name="serviceId" required>
+    
+                    <label for="operatorId">Operator ID:</label>
+                    <input type="text" id="operatorId" name="operatorId" required>
+    
+                    <button type="submit">Place Order</button>
+                </form>
+    
+                <!-- Form Kiểm tra đơn hàng -->
+                <form action="/check-order" method="POST">
+                    <h2>Check an Order</h2>
+                    <label for="apikey">API Key:</label>
+                    <input type="text" id="apikey" name="apikey" required>
+    
+                    <label for="id">Order ID:</label>
+                    <input type="text" id="id" name="id" required>
+    
+                    <button type="submit">Check Order</button>
+                </form>
+            </div>
+    
+            <!-- Cột bên phải: Kết quả -->
+            <div class="results">
+                <% if (orderResult) { %>
+                    <h2>Order Result</h2>
+                    <pre><%= JSON.stringify(orderResult, null, 2) %></pre>
+                <% } %>
+    
+                <% if (checkResult) { %>
+                    <h2>Check Order Result</h2>
+                    <pre><%= JSON.stringify(checkResult, null, 2) %></pre>
+                <% } %>
+    
+                <% if (error) { %>
+                    <h2>Error</h2>
+                    <pre><%= JSON.stringify(error, null, 2) %></pre>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
