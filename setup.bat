@@ -6,9 +6,24 @@ echo =========================================
 :: Kiểm tra Node.js và npm
 node -v >nul 2>nul
 IF %ERRORLEVEL% NEQ 0 (
-    echo [!] Node.js is not installed. Downloading Node.js installer...
-    powershell -Command "Start-Process 'https://nodejs.org/dist/v20.12.1/node-v20.12.1-x64.msi' -Wait"
-    echo [!] Please install Node.js and re-run this script.
+    echo [!] Node.js is not installed. Downloading Node.js via Chocolatey...
+
+    :: Kiểm tra xem Chocolatey đã được cài chưa
+    choco -v >nul 2>nul
+    IF %ERRORLEVEL% NEQ 0 (
+        echo [!] Chocolatey is not installed. Installing Chocolatey...
+        powershell -Command "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))"
+    )
+
+    :: Cài đặt Node.js qua Chocolatey
+    echo [*] Installing Node.js...
+    choco install -y nodejs-lts
+)
+
+:: Kiểm tra lại Node.js và npm
+node -v >nul 2>nul
+IF %ERRORLEVEL% NEQ 0 (
+    echo [!] Node.js installation failed. Please check your system.
     pause
     exit /b
 )
