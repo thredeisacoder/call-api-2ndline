@@ -98,4 +98,4 @@ api-app/
 ---
 
 ## **Bản quyền**
-© 2025 Your Name. Licensed under the ISC License.
+© 2025 Threde. Licensed under the ISC License.
